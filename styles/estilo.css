@@ -33,21 +33,13 @@ label {
     font-weight: 800;
 }
 
-form {
-    background-color: #FEFEFE;
+main>div {
     display: flex;
-    flex-wrap: wrap;
+    margin: 0.5rem;
     gap: 1rem;
-    margin-bottom: 1rem;
 }
 
-div {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-.bottom {
+footer {
     background-color: #EEF0F2;
     border-radius: 0rem 0rem 0.6rem 0.6rem;
     height: 4rem;
@@ -58,7 +50,7 @@ div {
     align-items: center;
 }
 
-.bottom input {
+footer input {
     background-color: #1BBA94;
     color: #FEFEFE;
     border-radius: 0.5rem;

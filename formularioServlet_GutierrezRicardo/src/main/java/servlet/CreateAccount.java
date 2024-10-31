@@ -4,12 +4,13 @@
  */
 package servlet;
 
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.io.PrintWriter;
+import java.util.Arrays;
 
 /**
  *
@@ -55,6 +56,36 @@ public class CreateAccount extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        String destino;
+        String firstName = request.getParameter("first-name");
+        String lastName= request.getParameter("last-name");
+        String email = request.getParameter("email");
+        String password = request.getParameter("password");
+        String confirmPassword = request.getParameter("confirm-password");
+        String gender = request.getParameter("gender");
+        String[] hobbies = request.getParameterValues("hobbies");
+        String sourceIncome = request.getParameter("source-income");
+        String income = request.getParameter("income");
+        String age = request.getParameter("age");
+        String bio = request.getParameter("bio");
+
+        if (firstName == null || firstName.isBlank() || email == null || email.isBlank() || password == null
+                || password.isBlank() || confirmPassword == null || !confirmPassword.equals(password)) {
+            destino = "create-account.jsp";
+        } else {
+            destino = "created-account.jsp";
+            request.setAttribute("firstName", firstName);
+            request.setAttribute("lastName", lastName);
+            request.setAttribute("email", email);
+            request.setAttribute("gender", gender);
+            request.setAttribute("hobbies", Arrays.toString(hobbies));
+            request.setAttribute("sourceIncome", sourceIncome + "K");
+            request.setAttribute("income", income);
+            request.setAttribute("age", age);
+            request.setAttribute("bio", bio);
+        }
+        RequestDispatcher dispatcher = request.getRequestDispatcher(destino);
+        dispatcher.forward(request, response);
     }
 
     /**
