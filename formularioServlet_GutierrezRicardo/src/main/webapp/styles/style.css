@@ -1,0 +1,78 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 30 oct 2024, 22:50:59
+    Author     : ricar
+*/
+body {
+    background-color: #557F91;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    color: #6D6D6D;
+    background-color: #EEF0F2;
+    text-align: center;
+    border-radius: 0.6rem 0.6rem 0rem 0rem;
+    width: 40rem;
+    height: 4rem;
+}
+
+main {
+    background-color: #FEFEFE;
+    width: 36rem;
+    padding: 2rem 2rem 0rem 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    color: #1BBA94;
+    font-weight: 800;
+}
+
+form {
+    background-color: #FEFEFE;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.bottom {
+    background-color: #EEF0F2;
+    border-radius: 0rem 0rem 0.6rem 0.6rem;
+    height: 4rem;
+    width: 40rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+}
+
+.bottom input {
+    background-color: #1BBA94;
+    color: #FEFEFE;
+    border-radius: 0.5rem;
+    border: none;
+    height: 2rem;
+    width: 5rem;
+    margin-right: 2rem;
+}
+
+input {
+    border-width: 1px;
+    border-color: #6D6D6D;
+    border-radius: 0.2rem;
+    padding: 0.3rem;
+}
