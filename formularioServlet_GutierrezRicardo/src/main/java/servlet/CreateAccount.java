@@ -79,8 +79,8 @@ public class CreateAccount extends HttpServlet {
             request.setAttribute("email", email);
             request.setAttribute("gender", gender);
             request.setAttribute("hobbies", Arrays.toString(hobbies));
-            request.setAttribute("sourceIncome", sourceIncome + "K");
-            request.setAttribute("income", income);
+            request.setAttribute("sourceIncome", sourceIncome);
+            request.setAttribute("income", income + "K");
             request.setAttribute("age", age);
             request.setAttribute("bio", bio);
         }
